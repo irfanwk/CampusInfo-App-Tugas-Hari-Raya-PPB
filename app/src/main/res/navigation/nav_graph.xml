@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment2">
+
+    <fragment
+        android:id="@+id/homeFragment2"
+        android:name="com.muhammadirfanwirakusuma.campusinfo_pertaminauniversity.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment2_to_announcementDetailFragment"
+            app:destination="@id/announcementDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/announcementDetailFragment"
+        android:name="com.muhammadirfanwirakusuma.campusinfo_pertaminauniversity.announcementDetailFragment"
+        android:label="fragment_announcement_detail"
+        tools:layout="@layout/fragment_announcement_detail" >
+        <argument
+            android:name="announcementId"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment2"
+        android:name="com.muhammadirfanwirakusuma.campusinfo_pertaminauniversity.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/scheduleFragment2"
+        android:name="com.muhammadirfanwirakusuma.campusinfo_pertaminauniversity.ScheduleFragment"
+        android:label="fragment_schedule"
+        tools:layout="@layout/fragment_schedule" />
+</navigation>
