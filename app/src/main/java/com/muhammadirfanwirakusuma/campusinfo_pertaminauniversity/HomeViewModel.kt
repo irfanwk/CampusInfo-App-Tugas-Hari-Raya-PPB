@@ -24,4 +24,11 @@ class HomeViewModel : ViewModel() {
         )
         _announcements.value = list
     }
+
+    private val _userName = MutableLiveData<String>("Mahasiswa Universitas Pertamina")
+    val userName: LiveData<String> = _userName
+
+    fun setUserName(newName: String) {
+        _userName.value = newName
+    }
 }

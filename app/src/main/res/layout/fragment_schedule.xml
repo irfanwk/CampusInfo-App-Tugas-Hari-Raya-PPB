@@ -1,14 +1,21 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ScheduleFragment">
+    android:orientation="vertical"
+    android:padding="16dp">
 
-    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jadwal Kuliah Semester Genap"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Anda bisa menggunakan TextView manual atau RecyclerView lagi untuk jadwal -->
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
-
-</FrameLayout>
+        android:layout_height="wrap_content"
+        android:text="Senin: Pemrograman Perangkat Bergerak (08:00 - 10:30)\n\nSelasa: Basis Data (13:00 - 15:30)\n\nRabu: Jaringan Komputer (10:00 - 12:30)"
+        android:textSize="16sp" />
+</LinearLayout>

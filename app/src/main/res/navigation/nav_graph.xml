@@ -12,11 +12,15 @@
         tools:layout="@layout/fragment_home" >
         <action
             android:id="@+id/action_homeFragment_to_announcementDetailFragment"
-            app:destination="@id/announcementDetailFragment" />
+            app:destination="@id/announcementDetailFragment"
+            app:enterAnim="@android:anim/slide_out_right"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/announcementDetailFragment"
-        android:name="com.muhammadirfanwirakusuma.campusinfo_pertaminauniversity.announcementDetailFragment"
+        android:name="com.muhammadirfanwirakusuma.campusinfo_pertaminauniversity.AnnouncementDetailFragment"
         android:label="fragment_announcement_detail"
         tools:layout="@layout/fragment_announcement_detail" >
         <argument

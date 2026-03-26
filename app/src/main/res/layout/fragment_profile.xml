@@ -1,14 +1,31 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProfileFragment">
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="24dp">
 
-    <!-- TODO: Update blank fragment layout -->
+    <ImageView
+        android:id="@+id/iv_profile"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@android:drawable/sym_def_app_icon"
+        android:layout_marginBottom="16dp"/>
+
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/tv_profile_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Muhammad Irfan Wira Kusuma"
+        android:textSize="22sp"
+        android:textStyle="bold" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/tv_profile_nim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="105223005"
+        android:textSize="16sp"
+        android:textColor="@android:color/darker_gray" />
+
+</LinearLayout>
