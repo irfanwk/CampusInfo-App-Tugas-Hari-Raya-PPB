@@ -7,11 +7,9 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.muhammadirfanwirakusuma.campusinfo_pertaminauniversity.databinding.ItemAnnouncementBinding
 
-// Menggunakan Lambda (Announcement) -> Unit untuk menangani klik sesuai PDF 2.2
 class AnnouncementAdapter(private val onClick: (Announcement) -> Unit) :
     ListAdapter<Announcement, AnnouncementAdapter.AnnouncementViewHolder>(DiffCallback) {
 
-    // ViewHolder menggunakan View Binding sesuai PDF 2.4
     class AnnouncementViewHolder(private val binding: ItemAnnouncementBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
@@ -37,7 +35,6 @@ class AnnouncementAdapter(private val onClick: (Announcement) -> Unit) :
         holder.bind(announcement, onClick)
     }
 
-    // Implementasi DiffUtil sesuai PDF 2.2
     object DiffCallback : DiffUtil.ItemCallback<Announcement>() {
         override fun areItemsTheSame(oldItem: Announcement, newItem: Announcement): Boolean {
             return oldItem.id == newItem.id

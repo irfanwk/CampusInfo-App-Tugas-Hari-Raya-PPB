@@ -12,11 +12,11 @@ import com.muhammadirfanwirakusuma.campusinfo_pertaminauniversity.databinding.Fr
 
 class HomeFragment : Fragment() {
 
-    // Inisialisasi View Binding dengan null-safe sesuai PDF 2.4
+    // Inisialisasi View Binding dengan null-safe
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
 
-    // Inisialisasi ViewModel sesuai PDF 2.4 (hanya diinisialisasi sekali)
+    // Inisialisasi ViewModel
     private val viewModel: HomeViewModel by viewModels()
 
     override fun onCreateView(
@@ -30,7 +30,7 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // 1. Setup Adapter dengan Lambda Click Listener
+        // Setup Adapter dengan Lambda Click Listener
         val adapter = AnnouncementAdapter { announcement ->
             // Navigasi ke Detail menggunakan Safe Args sesuai PDF 2.3
             val action = HomeFragmentDirections
@@ -38,17 +38,17 @@ class HomeFragment : Fragment() {
             findNavController().navigate(action)
         }
 
-        // 2. Setup RecyclerView
+        // Setup RecyclerView
         binding.rvAnnouncements.layoutManager = LinearLayoutManager(context)
         binding.rvAnnouncements.adapter = adapter
 
-        // 3. Observasi data dari ViewModel
+        // Observasi data dari ViewModel
         viewModel.announcements.observe(viewLifecycleOwner) { list ->
             adapter.submitList(list)
         }
     }
 
-    // Menghindari Memory Leak sesuai PDF 2.4
+    // Menghindari Memory Leak
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
